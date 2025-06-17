@@ -1,6 +1,6 @@
 # Python
 
-##1. Difference between List and Tuple in Python?
+## 1. Difference between List and Tuple in Python?
 | Feature     | List                       | Tuple             |
 | ----------- | -------------------------- | ----------------- |
 | Mutability  | Mutable                    | Immutable         |
