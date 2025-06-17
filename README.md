@@ -6,7 +6,7 @@
 | Mutability  | Mutable                    | Immutable         |
 | Syntax      | `[]`                       | `()`              |
 | Performance | Slower (due to mutability) | Faster            |
-| Use Case    | Dynamic data               | Fixed/static data |
+| Use Case    | Dynamic data               | Fixed/static data |  
 
 
 ### 2. How do sets help in removing duplicates from a list?
@@ -20,6 +20,14 @@ print(unique)  # Output: [1, 2, 3]
 ### 3. Why are dictionaries faster than lists for lookups?
 - Dictionaries use a hash table, which allows O(1) time complexity for lookups.
 - Lists require O(n) time to search because they don’t use keys or hashing.
+
+### 4. How are Python strings immutable if they allow operations like replace()?
+- Operations like replace() return a new string; they don’t modify the original string.
+```python
+s = "hello"
+print(s.replace("h", "y"))  # "yello"
+print(s)  # "hello"
+```
 
 
 
