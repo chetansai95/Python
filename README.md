@@ -90,8 +90,7 @@ print(a is b)  # Output: True
 ```
 
 ## 14. How does slicing work in tuples and strings? Syntax?
-```
-python
+```python
 s = "Python"
 t = (1, 2, 3, 4)
 print(s[1:4])  # Output: "yth"
@@ -99,8 +98,7 @@ print(t[:2])   # Output: (1, 2)
 ```
 
 ## 15. How can you reverse a string or list using slicing?
-```
-python
+```python
 s = "hello"
 l = [1, 2, 3]
 print(s[::-1])    # Output: "olleh"
