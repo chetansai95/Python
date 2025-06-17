@@ -12,8 +12,15 @@
 ### 2. How do sets help in removing duplicates from a list?
 A set automatically removes duplicates because it only allows unique elements.  
 ```python
-lst = [1, 2, 2, 3]
-unique = list(set(lst))
+a = [1, 2, 2, 3]
+unique = list(set(a))
 print(unique)  # Output: [1, 2, 3]
+```
+
+### 3. Why are dictionaries faster than lists for lookups?
+- Dictionaries use a hash table, which allows O(1) time complexity for lookups.
+- Lists require O(n) time to search because they don’t use keys or hashing.
+
+
 
 
