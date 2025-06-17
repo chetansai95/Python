@@ -11,7 +11,6 @@
 
 ### 2. How do sets help in removing duplicates from a list?
 A set automatically removes duplicates because it only allows unique elements.  
-a = [1, 2, 2, 3]  
-unique = list(set(a))  # [1, 2, 3]
+<pre> ```a = [1, 2, 2, 3]  unique = list(set(a))  # [1, 2, 3] ``` </pre>
 
 
