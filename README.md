@@ -7,3 +7,10 @@
 | Syntax      | `[]`                       | `()`              |
 | Performance | Slower (due to mutability) | Faster            |
 | Use Case    | Dynamic data               | Fixed/static data |
+
+
+### 2. How do sets help in removing duplicates from a list?
+A set automatically removes duplicates because it only allows unique elements.
+lst = [1, 2, 2, 3]
+unique = list(set(lst))  # [1, 2, 3]
+
