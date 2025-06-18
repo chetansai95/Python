@@ -1,4 +1,4 @@
-# Python
+# Python Interview Questions
 
 ## 1. Difference between List and Tuple in Python?
 | Feature     | List                       | Tuple             |
