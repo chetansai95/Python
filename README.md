@@ -37,7 +37,7 @@ merged = dict1 | dict2
 print(merged)  # Output: {'a': 1, 'b': 2}
 ```
 
-## 6. Explain dictionary comprehension with example
+## 6. Explain dictionary comprehension with example?
 ```python
 squares = {x: x**2 for x in range(5)}
 print(squares)  # Output: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
@@ -71,7 +71,7 @@ print(d.get('b', 0))  # Output: 0
 ## 11. What happens if you try to add a mutable object to a set?
 - You'll get a TypeError because sets require elements to be hashable (immutable).
 
-## 12. Code to find common elements in two lists using sets
+## 12. write a code to find common elements in two lists using set operations?
 ```python
 list1 = [1, 2, 3]
 list2 = [2, 3, 4]
@@ -79,7 +79,7 @@ common = set(list1) & set(list2)
 print(list(common))  # Output: [2, 3]
 ```
 
-## 13. Difference between is and == for strings
+## 13. what is the difference between is and == for string ? what is the syntax?
 - is: checks identity (same object in memory)
 - ==: checks equality (same content)
 ```python
@@ -89,7 +89,7 @@ print(a == b)  # Output: True
 print(a is b)  # Output: True 
 ```
 
-## 14. How does slicing work in tuples and strings? Syntax?
+## 14. How does slicing work in tuples and strings? what is the Syntax?
 ```python
 s = "Python"
 t = (1, 2, 3, 4)
