@@ -217,7 +217,4 @@ print(square(4))  # Output: 16
 - When loops slow down due to large data, optimize using generators, batching, or data streaming.
 - Avoid loading the entire dataset into memory.
 - Consider parallel processing or using efficient libraries like pandas.
-```python
-for line in open("largefile.txt"):
-    process(line)
-```
+
