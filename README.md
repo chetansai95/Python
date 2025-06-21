@@ -135,3 +135,46 @@ l = [1, 2, 3]
 print(s[::-1])    # Output: "olleh"
 print(l[::-1])  # Output: [3, 2, 1]
 ```
+
+## 16. How would you optimize a recursive function to avoid maximum recursion depth errors in Python?
+- Recursive functions in Python can hit a recursion depth limit, causing a RecursionError.
+- To avoid this, use memoization or convert the recursive logic into an iterative form.
+- Memoization caches results and prevents repeated computation.
+```python
+# Optimized Recursive Function Using Memoization:
+def fibonacci(n, memo={}):
+    if n in memo:
+        return memo[n]
+    if n <= 1:
+        return n
+    memo[n] = fibonacci(n - 1, memo) + fibonacci(n - 2, memo)
+    return memo[n]
+
+# Ex:
+print(fibonacci(10))  # Output: 55
+print(fibonacci(50))  # Output: 12586269025
+
+# Explanation:
+- memo={}: A default dictionary used to cache previously computed Fibonacci numbers.
+  if n in memo: Checks if the result is already cached to skip redundant computation.
+  Handles very large inputs (e.g., fibonacci(1000)) more efficiently than naive recursion.
+```
+```python
+# Optimized Recursive Function Using Iteration (No Recursion):
+def fibonacci_iterative(n):
+    if n <= 1:
+        return n
+    a, b = 0, 1
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    return b
+
+# Ex:
+print(fibonacci_iterative(10))  # Output: 55
+print(fibonacci_iterative(50))  # Output: 12586269025
+
+# Ex:
+This avoids recursion entirely by using a loop, so there's no risk of hitting the recursion depth limit.
+It’s also more memory-efficient and faster for large n, especially compared to naive recursion.
+It maintains the same logic flow as the recursive Fibonacci sequence but in a stack-safe and performance-optimized form.
+```
