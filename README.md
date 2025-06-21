@@ -155,9 +155,9 @@ print(fibonacci(10))  # Output: 55
 print(fibonacci(50))  # Output: 12586269025
 
 # Explanation:
-- memo={}: A default dictionary used to cache previously computed Fibonacci numbers.
-  if n in memo: Checks if the result is already cached to skip redundant computation.
-  Handles very large inputs (e.g., fibonacci(1000)) more efficiently than naive recursion.
+# memo={}: A default dictionary used to cache previously computed Fibonacci numbers.
+# if n in memo: Checks if the result is already cached to skip redundant computation.
+# Handles very large inputs (e.g., fibonacci(1000)) more efficiently than naive recursion.
 ```
 ```python
 # Optimized Recursive Function Using Iteration (No Recursion):
@@ -174,7 +174,50 @@ print(fibonacci_iterative(10))  # Output: 55
 print(fibonacci_iterative(50))  # Output: 12586269025
 
 # Ex:
-This avoids recursion entirely by using a loop, so there's no risk of hitting the recursion depth limit.
-It’s also more memory-efficient and faster for large n, especially compared to naive recursion.
-It maintains the same logic flow as the recursive Fibonacci sequence but in a stack-safe and performance-optimized form.
+# This avoids recursion entirely by using a loop, so there's no risk of hitting the recursion depth limit.
+# It’s also more memory-efficient and faster for large n, especially compared to naive recursion.
+# It maintains the same logic flow as the recursive Fibonacci sequence but in a stack-safe and performance-optimized form.
+```
+
+## 17. What is the difference between *args and **kwargs in function definitions, and how do you handle both in a single function?
+- *args collects extra positional arguments as a tuple, while **kwargs collects keyword arguments as a dictionary.
+- They allow functions to accept a variable number of inputs.
+- You can use both in a single function for maximum flexibility.
+```python
+def func(*args, **kwargs):
+    print(args, kwargs)
+
+func(1, 2, a=3, b=4)  # Output: (1, 2) {'a': 3, 'b': 4}
+```
+
+## 18. Explain how closures work in Python. Give a real-time example where closures are better than classes.
+- A closure is a function object that remembers values from its enclosing scope, even after the outer function is done.
+- It is useful for creating stateful behavior without using classes.
+- Closures are often used in decorators and callbacks.
+```python
+def outer(x):
+    def inner(y):
+        return x + y
+    return inner
+
+add5 = outer(5)
+print(add5(3))  # Output: 8
+```
+
+## 19. When would you use a lambda function over a regular function in a production codebase?
+- Lambda functions are small, anonymous functions defined with the lambda keyword.
+- They are best used for simple, one-line expressions.
+- For complex logic or reuse, regular def functions are preferred.
+```python
+square = lambda x: x * x
+print(square(4))  # Output: 16
+```
+
+## 20. How would you handle a situation where a loop inside a function is causing performance issues due to large data processing?
+- When loops slow down due to large data, optimize using generators, batching, or data streaming.
+- Avoid loading the entire dataset into memory.
+- Consider parallel processing or using efficient libraries like pandas.
+```python
+for line in open("largefile.txt"):
+    process(line)
 ```
